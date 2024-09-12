@@ -154,6 +154,7 @@ defmodule Tzdata.Util do
   def month_number_for_month_name(string) do
     string
     |> String.downcase()
+    |> String.slice(0..2)
     |> cap_month_number_for_month_name
   end
 
